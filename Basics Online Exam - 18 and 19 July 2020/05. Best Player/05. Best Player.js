@@ -31,3 +31,30 @@ function bestPlayer(arr) {
 }
 
 // bestPlayer((["Neymar", "2", "Ronaldo", "1", "Messi", "3", "END"]))
+
+
+//------------------------------------------------------------------------(3)------------------------------------------------
+function bestPlayer(arg) {
+  let playerName = new String()  //  null || ''
+  let bestResult = Number.MIN_SAFE_INTEGER  // null || 0
+ 
+  while (true) { // infinity loop
+    var token = arg.shift() // get current name player or finish command
+    if (token == 'END') break // break infinity while loop
+    var goals = Number(arg.shift()) // get current goals
+ 
+    if (bestResult < goals) {// save best result and name player
+      playerName = token
+      bestResult = goals 
+    }
+    if (goals >= 10)  break // break infinity while loop
+  }
+  // print result
+  console.log(`${playerName} is the best player!`)
+  if (goals < 3) console.log(`He has scored ${bestResult} goals.`)
+  else console.log(`He has scored ${bestResult} goals and made a hat-trick !!!`)
+}
+
+// bestPlayer(["Neymar", "2", "Ronaldo", "1", "Messi", "3", "END"])
+// bestPlayer(['Silva', '5', 'Harry Kane', '10'])
+//bestPlayer(["Petrov","2","Drogba","11"])
