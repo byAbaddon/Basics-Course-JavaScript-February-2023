@@ -1,4 +1,4 @@
-(p) => p == 's3cr3t!P@ssw0rd' ? 'Welcome' : 'Wrong password!'
+p => p == 's3cr3t!P@ssw0rd' ? 'Welcome' : 'Wrong password!'
 
 //---------------------------------(2)--------------------------
 
