@@ -10,6 +10,19 @@ function addMinToTime([hour, min]) {
 
 
 //-----------------------------------------------------------(2)-------------------------------
+function timeMinutes([hours, minutes]) {
+    let addTime = hours * 60 + Number(minutes) + 15
+    let totalHour = parseInt(addTime / 60)
+    let totalMin = addTime % 60
+ 
+    if (totalHour >= 24) totalHour -= 24 
+    console.log(`${totalHour}:${totalMin < 10 ? 0 : ''}${totalMin}`)
+
+}
+// timeMinutes(['23', '59'])
+
+//-----------------------------------------------------------(3)-------------------------------
+
 
 function timeMinutes([arg1, arg2]) {
     let hours = Number(arg1)
