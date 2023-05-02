@@ -23,22 +23,19 @@ function timeMinutes([hours, minutes]) {
 
 //-----------------------------------------------------------(3)-------------------------------
 
-
-function timeMinutes([arg1, arg2]) {
-    let hours = Number(arg1)
-    let minutes = Number(arg2)
-
-    let addTime = hours * 60 + minutes + 15
-    let totalHour = parseInt(addTime / 60)
-    let totalMin = addTime % 60;
- 
-    if (totalHour >= 24)  totalHour -= 24
-       
-    if (totalMin < 10) {
-        console.log(`${totalHour}:0${totalMin}`)
-    } else {
-        console.log(`${totalHour}:${totalMin}`)
+function timeMinutes(input) {
+    let hours = Number(input[0])
+    let minutes = Number(input[1]) + 15
+    
+    if (minutes > 59) { 
+        minutes -= 60
+        hours += 1
     }
+    
+    if (hours >= 24) hours -= 24
+    if (minutes < 10) minutes = '0' + minutes
+    
+    console.log(`${hours}:${minutes}`);
 }
 
 
