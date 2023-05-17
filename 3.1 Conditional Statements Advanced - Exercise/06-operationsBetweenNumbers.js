@@ -1,9 +1,9 @@
-function operationsBetweenNumbers([x, y, operator]) {
-  const sum = eval(x + operator + y)
-  if (sum === Infinity || sum !== sum) return `Cannot divide ${x} by zero`
-  else if (operator == "/") return `${x} ${operator} ${y} = ${sum.toFixed(2)}`
-  else if (operator == "%") return `${x} ${operator} ${y} = ${sum}`
-  else return `${x} ${operator} ${y} = ${sum} - ${(sum & 1) == 0 ? 'even' : 'odd'}`
+function operationsBetweenNumbers([x, y, ope]) {
+  const sum = eval(x + ope + y)
+  if (sum == Infinity || !sum) return `Cannot divide ${x} by zero`
+  if (ope == "/") return `${x} ${ope} ${y} = ${sum.toFixed(2)}`
+  if (ope == "%") return `${x} ${ope} ${y} = ${sum}`
+  return `${x} ${ope} ${y} = ${sum} - ${sum & 1 ? 'odd' : 'even'}`
 }
 
 // console.log(operationsBetweenNumbers ([10, 12, '+']))
