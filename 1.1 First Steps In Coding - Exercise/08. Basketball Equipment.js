@@ -1,5 +1,5 @@
 t => {
-  s = +t * 0.60; o = s * 0.80; b = o / 4; a = b / 5
+  s = +t * .6; o = s * .8; b = o / 4; a = b / 5
   return +t + s + o + b + a
 }
 
